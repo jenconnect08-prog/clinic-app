@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: #fdf5f5;
+  background-image: radial-gradient(circle at 50% 10%, #fde7e9 0%, transparent 60%);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Layout Container */
+.container {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Top Decorative Icons */
+.top-icons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.icon-circle {
+  width: 28px;
+  height: 28px;
+  background-color: #fbd3d6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* Header Typography */
+.main-title {
+  color: #b83253;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #8c7378;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Resource Topic Cards */
+.topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topic-card {
+  background-color: #fff2f2;
+  border: 1px solid #f9dede;
+  border-radius: 6px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topic-card:hover {
+  background-color: #fbe6e6;
+  border-color: #f1c3c6;
+}
+
+.topic-title {
+  color: #b83253;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.topic-status {
+  color: #b89299;
+  font-size: 13px;
+}
+
+/* Right Side Vertical HEALTH Badges */
+.health-sidebar {
+  position: fixed;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.h-badge { background-color: #d8707c; }
+.e-badge { background-color: #f3a85b; }
+.a-badge { background-color: #83d3b7; }
+.l-badge { background-color: #d8c85c; }
+.t-badge { background-color: #e26279; }
+.h2-badge { background-color: #9ac2e6; }
+
+/* Left Hand Abstract Humanoid Figures */
+.left-illustration {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  opacity: 0.85;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figure-large .head { width: 45px; height: 45px; background-color: #f8dbdf; border-radius: 50%; margin-bottom: 6px; }
+.figure-large .body { width: 55px; height: 80px; background-color: #f8dbdf; border-radius: 20px 20px 0 0; }
+.figure-large .legs { width: 12px; height: 50px; background-color: #f8dbdf; }
+
+.figure-small .head { width: 35px; height: 35px; background-color: #ede2db; border-radius: 50%; margin-bottom: 6px; }
+.figure-small .body { width: 40px; height: 55px; background-color: #ede2db; border-radius: 15px 15px 0 0; }
+.figure-small .legs { width: 10px; height: 40px; background-color: #ede2db; }
+
+/* Modal Popup Overlay & Window */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(184, 50, 83, 0.25);
+  backdrop-filter: blur(2px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fff8f8;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 480px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.modal-header-title {
+  color: #b83253;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.modal-subtitle {
+  color: #b89299;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.modal-resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.resource-card {
+  display: block;
+  background-color: #fff2f2;
+  border: 1px solid #f9dede;
+  border-radius: 6px;
+  padding: 12px 16px;
+  transition: background-color 0.2s ease;
+}
+
+a.resource-card:hover {
+  background-color: #fbe6e6;
+}
+
+.resource-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.res-title {
+  color: #615558;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.res-desc {
+  color: #b89299;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.btn-close {
+  background-color: #e0707c;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-close:hover {
+  background-color: #cb5965;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Resources | AYA Medical Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Floating Abstract Figures -->
+<div class="left-illustration">
+    <div class="figure figure-large">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="legs"></div>
+    </div>
+    <div class="figure figure-small">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="legs"></div>
+    </div>
+</div>
+
+<!-- Vertical Right Sidebar Badges -->
+<div class="health-sidebar">
+    <span class="badge h-badge">H</span>
+    <span class="badge e-badge">E</span>
+    <span class="badge a-badge">A</span>
+    <span class="badge l-badge">L</span>
+    <span class="badge t-badge">T</span>
+    <span class="badge h2-badge">H</span>
+</div>
+
+<main class="container">
+    <div class="top-icons">
+        <span class="icon-circle">❤️</span>
+        <span class="icon-circle">🩺</span>
+        <span class="icon-circle">➕</span>
+    </div>
+
+    <h1 class="main-title">Visit resources</h1>
+    <p class="subtitle">Select a topic below to see the initial visit guide, handouts, and follow-up materials for that visit type.</p>
+
+    <div class="topics-list" id="topicsContainer">
+        <!-- Topic cards injected via script.js -->
+    </div>
+</main>
+
+<!-- Modal Popup -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+        <h2 id="modalTitle" class="modal-header-title">Topic Title</h2>
+        <p class="modal-subtitle">Documents for this visit type</p>
+
+        <div id="modalResources" class="modal-resources-list">
+            <!-- Resource items injected dynamically -->
+        </div>
+
+        <button class="btn-close" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
