@@ -8,7 +8,7 @@ const TOPICS_DATA = [
         title: "Initial Visit template",
         desc: "For clinician use during first appointment",
         status: "available",
-        url: "https://example.com/docs/eating-disorder-initial.pdf"
+        url: "https://docs.google.com/document/d/1mNxZ3b1Dcjo1gLKA7REwQjIYK6hYtBLg/edit"
       },
       {
         title: "Initial Visit Handout (For Parent)",
